@@ -8,7 +8,7 @@ import java.util.Scanner;
 
             Scanner in = new Scanner(System.in);
             int userNum;
-c
+
             System.out.println("Input your number: ");
             while (!in.hasNextInt()){
                 System.out.println("That's not a prime number");
