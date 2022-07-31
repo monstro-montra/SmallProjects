@@ -8,7 +8,7 @@ import java.util.Scanner;
 
             Scanner in = new Scanner(System.in);
             int userNum;
-
+c
             System.out.println("Input your number: ");
             while (!in.hasNextInt()){
                 System.out.println("That's not a prime number");
@@ -16,7 +16,7 @@ import java.util.Scanner;
             }
 
            
-            userNum = in.nextInt();
+            userNum = in.nextInt(); 
 
             if(isPrime(userNum)){
                 System.out.println("Your number is: " + userNum);
@@ -25,8 +25,6 @@ import java.util.Scanner;
             else{
                 System.out.println(userNum + " is not a prime number.");
             }
-            
-
 
 
         }
