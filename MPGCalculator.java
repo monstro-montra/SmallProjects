@@ -1,6 +1,5 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.regex.*;
 
     class MPGCalculator {
 
@@ -11,7 +10,8 @@ import java.util.regex.*;
             int carYear; //year of the car
             String carBrand; //car brand
             String carModel; //model of the car
-            double startingOdometer; //the starting odometer reading
+            double startingOdometer;
+            double endingOdometer; //the starting odometer reading
             double gallonsUsed; //how many gallons were used
             double gasMileage; //car's mpg
             Scanner in = new Scanner(System.in);
@@ -69,6 +69,17 @@ import java.util.regex.*;
                 }
             }
 
+            System.out.print("Input your car's odometer reading from the end of the trip: ");// ask user to input a odometer reading
+            while(true) { //create a while loop
+                try{//try block. exceptions errors can occur here.
+                    endingOdometer = in.nextDouble(); //check for an double
+                    break; //break out of the while loop here
+                }catch(InputMismatchException e){ // catches the try block exception error
+                    System.out.print("Please input a number: "); //ask user to input an integer.
+                    in.next(); // scanner waits for next user input.
+                }
+            }
+
             System.out.print("Input how many gallons it took to refill your car: "); // ask how many gallons used
             while(true) { //create a while loop
                 try{//try block. exceptions errors can occur here.
@@ -82,12 +93,13 @@ import java.util.regex.*;
 
             in.close(); // close scanner to prevent resource leak
 
-            gasMileage = startingOdometer / gallonsUsed;
+            gasMileage = (endingOdometer - startingOdometer) / gallonsUsed;
 
             System.out.println("Car Year: " + carYear);
             System.out.println("Car Brand " + carBrand);
             System.out.println("Car Model: " + carModel);
-            System.out.println("Odometer reading: " + startingOdometer);
+            System.out.println("Starting odometer reading: " + startingOdometer);
+            System.out.println("Ending odometer reading: " + endingOdometer);
             System.out.println("Gallons used to refill car: " + gallonsUsed);
             System.out.println("Your MPG is: " + gasMileage);
         }
