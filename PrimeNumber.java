@@ -26,8 +26,9 @@ import java.util.Scanner;
                 System.out.println(userNum + " is not a prime number.");
             }
 
-
+            in.close();
         }
+        
         
         //prime numbers can only be divided by itself, and 1 without remainders.
         static boolean isPrime(int num){ 
@@ -41,8 +42,10 @@ import java.util.Scanner;
 
             }
             return true; 
-
+            
         }
+
+        
 }
 
     

@@ -24,5 +24,7 @@ import java.util.Scanner;
 
             System.out.println("Hello!");
 
+            in.close();
+
         }
     }
