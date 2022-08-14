@@ -9,17 +9,17 @@ import java.util.InputMismatchException;
             float taxRate;
             float taxAmount;
             float takeHome;
-            Scanner in = new Scanner(System.in);
+            Scanner in = new Scanner(System.in); //generate new scanner called in
 
             System.out.println("Hi! We're going to caluclate your average weekly average withholding.");
-            System.out.println("Please input your weekly income.");
+            System.out.print("Please input your weekly income: ");
 
             while (true){ //create while loop
                 try{ //try block
                     income = in.nextFloat(); //set income to scanner's next float input
                     break; //break out of loop
                 } catch(InputMismatchException e) { // catch input mismatch exception error
-                    System.out.println("Wrong input. Please input an integer or decimal."); //asks user to input a float instead
+                    System.out.print("Wrong input. Please input an integer or decimal: "); //asks user to input a float instead
                     in.nextLine(); //scanner scans for nextLine
                 }
             }
@@ -45,7 +45,7 @@ import java.util.InputMismatchException;
 
             } else { //otherwise 
                 taxRate = 0; //taxRate is 0
-            }
+            }   
 
             System.out.println("Your tax rate is: " + taxRate + "%"); //prints out tax rate in percentage form
             
