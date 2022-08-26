@@ -9,7 +9,12 @@ public class ArrayForwardAndReverse {
 
       System.out.println("Enter four integers: ");
       for (i = 0; i < courseGrades.length; ++i) {
-         courseGrades[i] = in.nextInt();
+         if (i < courseGrades.length){ // if i < length of courseGrades
+            courseGrades[i] = in.nextInt(); // get nextInt. this will loop four times
+         } else {
+            in.close(); // close in scanner once above if statement is no longer true
+         }
+            
       }
 
       
@@ -25,6 +30,7 @@ public class ArrayForwardAndReverse {
          
       System.out.println("");
          
+      in.close();
 
    }
 }
