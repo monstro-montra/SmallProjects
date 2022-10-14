@@ -19,8 +19,8 @@ public class GetWeeklyTemperatures {
         int min = 32; // minimum temperature
         int max = 100; //maximum temperature
         String userInput;
-        ArrayList<Integer> temp = new ArrayList<Integer>(); //create int arraylist called temp
-        ArrayList<String> weekDay = new ArrayList<String>(); //create string arraylist called weekDay
+        ArrayList<Integer> temp = new ArrayList<>(); //create int arraylist called temp
+        ArrayList<String> weekDay = new ArrayList<>(); //create string arraylist called weekDay
         float averageTemp;
         int sum = 0;
 
@@ -33,7 +33,7 @@ public class GetWeeklyTemperatures {
         weekDay.add("Friday");
         weekDay.add("Saturday");
 
-        //add random temperatures between 32(min) and 100(max) to temp. 100 - 32 = 68. progam will select
+        //add random temperatures between 32(min) and 100(max) to temp. 100 - 32 = 68. program will select
         //an integer between 0 and 68, then add 32 to that number to stay within the range of 32 to 100.
         temp.add(min + r.nextInt(max-min));
         temp.add(min + r.nextInt(max-min));
@@ -92,28 +92,28 @@ public class GetWeeklyTemperatures {
         }
 
 
-        if (userInput == weekDay.get(0)){
+        if (userInput.equals(weekDay.get(0))){
             System.out.println(weekDay.get(0) + ": "   + temp.get(0) + " degrees.");
         } 
-        else if (userInput == weekDay.get(1)){
+        else if (userInput.equals(weekDay.get(1))){
             System.out.println(weekDay.get(1) + ": " + temp.get(1) + " degrees.");
         } 
-        else if (userInput == weekDay.get(2)){
+        else if (userInput.equals(weekDay.get(2))){
             System.out.println(weekDay.get(2) + ": " + temp.get(2) + " degrees.");
         }
-        else if (userInput == weekDay.get(3)){
+        else if (userInput.equals(weekDay.get(3))){
             System.out.println(weekDay.get(3) + ": " + temp.get(3) + " degrees.");
         }
-        else if (userInput == weekDay.get(4)){
+        else if (userInput.equals(weekDay.get(4))){
             System.out.println(weekDay.get(4) + ": " + temp.get(4) + " degrees.");
         }
-        else if (userInput == weekDay.get(5)){
+        else if (userInput.equals(weekDay.get(5))){
             System.out.println(weekDay.get(5) + ": " + temp.get(5) + " degrees.");
         }
-        else if (userInput == weekDay.get(6)){
+        else if (userInput.equals(weekDay.get(6))){
             System.out.println(weekDay.get(6) + ": " + temp.get(6) + " degrees.");
         }
-        else if (userInput == "Week"){
+        else if (userInput.equals("Week")){
             for (int i = 0; i < weekDay.size(); i++){
                 System.out.println(weekDay.get(i) + ": " + temp.get(i) + " degrees.");
             }
