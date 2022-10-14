@@ -20,25 +20,31 @@ public class MethodCall2 {
         String c;
 
         System.out.println("Input three strings.");
-        while(true){
+        while(true){ // while loop that finishes once string inputs are stored in respective variables
             try{
                 a = in.next();
                 b = in.next();
                 c = in.next();
-                System.out.println("Your inputs are " + a + " " + b + " and " + c);
-                return "Success";
+                System.out.println("Your inputs are " + a + ", " + b + ", and " + c);
+                in.close();
+                return "Success"; // return this string when finished
             }
-            catch (InputMismatchException ex) {
+            catch (InputMismatchException ex) { // catch this input mismatch exception error
                 System.out.println("You entered incorrect data. Please retry.");
-                return "Failure";
+                return "Failure"; // return this string when finished
             }
+            
         }
 
-    }
-    public static void main(String[] args){
-        String s = input("Test");
-        System.out.println(s);
         
+            
+        }
+
+    
+    public static void main(String[] args){
+        String s = input("Test"); // set s = to the calling of input method
+        System.out.println(s); // print the return of s
+
     }
 
     
