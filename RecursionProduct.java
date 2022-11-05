@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner; //import scanner
 public class RecursionProduct {
     //fields
-    private final ArrayList<Float> numbers = new ArrayList<>();
+    private final ArrayList<Float> numbers = new ArrayList<>(); //create arraylist of floats
 
     //main method
     public static void main(String[] args){
@@ -17,16 +17,16 @@ public class RecursionProduct {
 
     //recursive method for scanning/adding to the numbers arraylist
     private void scanArray(int count){
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in); //create new scanner object called in
         System.out.println("Input a number: ");
 
         while(true){//start a while loop
-            try{ //try the following code block
+            try{ //try the following code block for exception logic
                 numbers.add(in.nextFloat());
                 break;
             } catch (InputMismatchException e){
-                System.out.println("Wrong input. Please put in a number.");
-                in.nextLine();
+                System.out.println("Wrong input. Please put in a number."); //exception logic
+                in.nextLine(); //scan next line
                 // scanner waits for next user input.
             }
         }
