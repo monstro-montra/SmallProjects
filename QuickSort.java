@@ -8,7 +8,7 @@ public class QuickSort {
         int[] nums = new int[10]; //array of size 10
 
         for (int i = 0; i < nums.length; i++){
-            nums[i] = rand.nextInt(100); //set nums[i] = to a random integer up to 100
+            nums[i] = rand.nextInt(1000); //set nums[i] = to a random integer up to 100
         }
 
         System.out.println("Numbers before sort");
