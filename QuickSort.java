@@ -25,6 +25,7 @@ public class QuickSort {
     private static void quickSort(int[] array){ //Overloaded method to be able to pass in only the array
         quickSort(array, 0, array.length -1);
     }
+
     public static void quickSort(int[] array, int lowIndex, int highIndex){
         if (lowIndex >= highIndex){ //checks to see if the subarray is just one element
             return;

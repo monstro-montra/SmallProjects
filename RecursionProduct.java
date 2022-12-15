@@ -50,6 +50,7 @@ public class RecursionProduct {
             printArray(count + 1);
         }
     }
+
     //recursive method to find the product of all numbers in the arraylist
     public float arrayProduct(int count){
         if (count == numbers.size()){ // if the count is equal to the size of numbers arraylist. base case
@@ -60,7 +61,5 @@ public class RecursionProduct {
             //return the (count) element of numbers arraylist
             //times arrayProduct(next element of numbers arrayList)
         }
-
     }
-
 }
